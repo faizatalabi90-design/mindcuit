@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calming Sounds | Mindcuit</title>
+<meta name="description" content="Soothing ambient sounds to help you relax, focus, or sleep.">
+<meta name="theme-color" content="#080D18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap bar">
+<a class="logo" href="index.html"><img class="orb" src="img/orb.svg" alt="" width="36" height="36">Mindcuit</a>
+<button class="burger" id="menuOpen" aria-label="Open menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+<nav id="nav" aria-label="Main"><button class="burger close" id="menuClose" aria-label="Close menu">&times;</button><a href="index.html">Home</a><a href="try.html">Try Mindcuit</a><a href="recommendations.html">Recommendations</a><a href="sounds.html" aria-current="page">Calming Sounds</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></nav>
+</div></header>
+<main id="main">
+
+<section><div class="wrap narrow"><h1>Calming sounds</h1>
+<p style="margin:1rem 0">Choose one sound or mix a few. Everything is generated in your browser, so it needs no download. Turn your volume down low to start.</p>
+<div class="grid" id="sounds">
+<div class="card feat"><span class="ico" aria-hidden="true">&#127783;</span><div style="flex:1"><h3>Soft rain</h3><p>Steady, gentle rainfall.</p></div><button class="chip" data-s="rain" aria-pressed="false">Play</button></div>
+<div class="card feat"><span class="ico" aria-hidden="true">&#127754;</span><div style="flex:1"><h3>Ocean waves</h3><p>Slow waves rolling in and out.</p></div><button class="chip" data-s="ocean" aria-pressed="false">Play</button></div>
+<div class="card feat"><span class="ico" aria-hidden="true">&#127788;</span><div style="flex:1"><h3>Night wind</h3><p>A quiet breeze that drifts.</p></div><button class="chip" data-s="wind" aria-pressed="false">Play</button></div>
+<div class="card feat"><span class="ico" aria-hidden="true">&#127769;</span><div style="flex:1"><h3>Deep calm</h3><p>A warm, slow humming tone.</p></div><button class="chip" data-s="pad" aria-pressed="false">Play</button></div>
+<div class="card feat"><span class="ico" aria-hidden="true">&#9729;</span><div style="flex:1"><h3>Brown noise</h3><p>A deep rumble that masks distractions.</p></div><button class="chip" data-s="brown" aria-pressed="false">Play</button></div>
+</div>
+<div class="card" style="margin-top:1.5rem">
+<label for="vol" style="margin-top:0">Volume</label><input id="vol" type="range" min="0" max="100" value="40">
+<label for="timer">Sleep timer</label>
+<select id="timer"><option value="0">Off</option><option value="15">15 minutes</option><option value="30">30 minutes</option><option value="60">60 minutes</option></select>
+<button class="btn ghost" id="stopAll" style="margin-top:1.2rem;width:100%">Stop all sounds</button>
+<p class="note" id="status" aria-live="polite"></p></div>
+<p class="note">Sounds are synthesized and may differ from recordings. Not a treatment for sleep or mental health conditions.</p>
+</div></section>
+</main>
+<footer><div class="wrap"><nav aria-label="Footer"><a href="index.html">Home</a><a href="try.html">Try Mindcuit</a><a href="recommendations.html">Recommendations</a><a href="sounds.html">Calming Sounds</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></nav>
+<p>Mindcuit is a space for reflection, not a replacement for professional care. If you are in crisis or in danger, contact your local emergency number or a crisis line near you.</p>
+<p style="margin-top:.6rem">Small steps. Big healing.</p>
+<p style="margin-top:.6rem">Created by Alabi Faizat Aderomola &middot; <a href="mailto:faizatalabi90@gmail.com">faizatalabi90@gmail.com</a></p></div></footer>
+<script src="js/main.js"></script><script src="js/sounds.js"></script>
+</body>
+</html>

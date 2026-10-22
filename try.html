@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try Mindcuit | Reflect</title>
+<meta name="description" content="Share what's on your mind in a private, gentle space.">
+<meta name="theme-color" content="#080D18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap bar">
+<a class="logo" href="index.html"><img class="orb" src="img/orb.svg" alt="" width="36" height="36">Mindcuit</a>
+<button class="burger" id="menuOpen" aria-label="Open menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+<nav id="nav" aria-label="Main"><button class="burger close" id="menuClose" aria-label="Close menu">&times;</button><a href="index.html">Home</a><a href="try.html" aria-current="page">Try Mindcuit</a><a href="recommendations.html">Recommendations</a><a href="sounds.html">Calming Sounds</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></nav>
+</div></header>
+<main id="main">
+
+<section><div class="wrap narrow" id="flow">
+<div class="steps"><button class="chip" id="back" aria-label="Go back">&larr;</button><strong style="font:500 1.4rem var(--serif);color:var(--white)">Mindcuit</strong><span id="stepLabel" aria-live="polite">1/3</span></div>
+<div class="step active"><h1 style="font-size:1.9rem">What's on your mind today?</h1>
+<p style="margin:.6rem 0">Take your time. There's no rush. You can share anything, big or small.</p>
+<label for="thought" class="hidden">Your thoughts</label>
+<textarea id="thought" maxlength="500" placeholder="Type your thoughts here..."></textarea>
+<p class="count" id="count">0/500</p>
+<button class="btn" id="next1" style="width:100%;margin-top:1rem">Next</button>
+<p class="note">Your privacy matters. Your thoughts are not stored. They stay in this page and disappear when you leave.</p></div>
+<div class="step"><img class="globe-img" src="img/orb.svg" alt="" width="70" height="70" style="width:110px;margin-bottom:1rem"><h1 style="font-size:1.9rem;text-align:center">I hear you...</h1>
+<div class="card" style="margin-top:1.2rem"><p id="reply" style="color:var(--white)"></p></div>
+<div class="chips" id="chips"><button class="chip" data-msg="Breathe in for four, hold for four, out for six.">Breathe</button><button class="chip" data-msg="Talk to yourself the way you would talk to a friend.">Be kind to yourself</button><button class="chip" data-msg="You are not alone, even when it feels that way.">You're not alone</button></div>
+<p id="chipMsg" aria-live="polite" style="min-height:3em"></p>
+<button class="btn" id="next2" style="width:100%">Next</button></div>
+<div class="step" style="text-align:center"><img class="globe-img" src="img/orb.svg" alt="" width="90" height="90" style="width:130px;margin-bottom:1rem"><h1 style="font-size:1.9rem">You're not alone</h1>
+<p style="margin:.8rem 0 1.6rem">Whatever you're feeling, it's valid. Take care of yourself, and remember: you matter.</p>
+<button class="btn" id="again" style="width:100%">Start again</button>
+<p style="margin-top:1rem"><a href="index.html">Back to home</a></p>
+<p class="help">If you feel unsafe or at risk of harming yourself, please contact local emergency services or a trusted person right now.</p></div>
+</div></section>
+</main>
+<footer><div class="wrap"><nav aria-label="Footer"><a href="index.html">Home</a><a href="try.html">Try Mindcuit</a><a href="recommendations.html">Recommendations</a><a href="sounds.html">Calming Sounds</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></nav>
+<p>Mindcuit is a space for reflection, not a replacement for professional care. If you are in crisis or in danger, contact your local emergency number or a crisis line near you.</p>
+<p style="margin-top:.6rem">Small steps. Big healing.</p>
+<p style="margin-top:.6rem">Created by Alabi Faizat Aderomola &middot; <a href="mailto:faizatalabi90@gmail.com">faizatalabi90@gmail.com</a></p></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

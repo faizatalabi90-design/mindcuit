@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<defs>
+<radialGradient id="sphere" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#3b6bff"/><stop offset=".5" stop-color="#1a2a8f"/><stop offset="1" stop-color="#0a1040"/></radialGradient>
+<radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset=".6" stop-color="#42D9FF" stop-opacity="0"/><stop offset=".85" stop-color="#42D9FF" stop-opacity=".35"/><stop offset="1" stop-color="#8957FF" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<path id="brain" d="M114,194 C94,179 99,154 119,149 C119,129 144,119 162,129 C174,112 204,116 212,134 C234,132 249,152 239,172 C254,189 242,216 222,219 C219,239 189,246 174,234 C159,249 129,242 129,224 C109,226 99,209 114,194 Z"/>
+<path id="heart" d="M0,40 C-60,0 -50,-45 -22,-45 C-10,-45 0,-35 0,-25 C0,-35 10,-45 22,-45 C50,-45 60,0 0,40 Z" transform="translate(236,206) scale(1.25)"/>
+<clipPath id="hc"><use href="#heart"/></clipPath>
+</defs>
+<circle cx="200" cy="200" r="198" fill="url(#halo)"/>
+<circle cx="200" cy="200" r="178" fill="url(#sphere)"/>
+<g fill="none" stroke="#7fb4ff" stroke-opacity=".18" stroke-width="1.2">
+<ellipse cx="200" cy="200" rx="178" ry="60"/><ellipse cx="200" cy="200" rx="178" ry="120"/>
+<ellipse cx="200" cy="200" rx="60" ry="178"/><ellipse cx="200" cy="200" rx="120" ry="178"/>
+<line x1="22" y1="200" x2="378" y2="200"/><line x1="200" y1="22" x2="200" y2="378"/></g>
+<circle cx="200" cy="200" r="178" fill="none" stroke="#42D9FF" stroke-opacity=".6" stroke-width="2" filter="url(#soft)"/>
+<g transform="translate(-6,0)">
+<use href="#brain" fill="#42D9FF" fill-opacity=".16" stroke="#42D9FF" stroke-width="3" filter="url(#soft)"/>
+<g fill="none" stroke="#42D9FF" stroke-opacity=".7" stroke-width="2.2" stroke-linecap="round">
+<path d="M150,160 C160,175 150,190 162,200"/><path d="M200,135 C195,160 210,170 205,195"/><path d="M135,215 C155,205 170,215 185,225"/><path d="M225,160 C215,175 230,190 220,210"/></g>
+<use href="#heart" fill="#8957FF" fill-opacity=".22" stroke="#b58cff" stroke-width="3" filter="url(#soft)"/>
+<g clip-path="url(#hc)"><use href="#brain" fill="#F3F6FF" filter="url(#glow)" class="core"/></g>
+</g>
+<style>.core{animation:pulse 3.5s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}@media(prefers-reduced-motion:reduce){.core{animation:none}}</style>
+</svg>
