@@ -1,0 +1,376 @@
+/* ===== Mindcuit styles ===== */
+/* Colors used: #080D18 navy, #101B35 midnight, #4263FF blue, #42D9FF cyan, #8957FF violet, #F3F6FF white */
+
+/* ----- basic reset and page setup ----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background-color: #080D18;
+  background-image: linear-gradient(160deg, #101B35, #080D18 60%, #1a1050);
+  background-attachment: fixed;
+  color: #F3F6FF;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 { font-size: 34px; }
+h2 { font-size: 26px; }
+h3 { font-size: 18px; }
+
+p { color: #b4bedf; }
+a { color: #42D9FF; }
+
+/* shows an outline when using the keyboard */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 3px solid #42D9FF;
+  outline-offset: 3px;
+}
+
+main { flex: 1; }
+section { padding: 40px 0; }
+
+.wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* skip link for screen readers */
+.skip {
+  position: absolute;
+  left: -999px;
+}
+.skip:focus {
+  left: 10px;
+  top: 10px;
+  background: #F3F6FF;
+  color: #080D18;
+  padding: 8px 16px;
+  z-index: 99;
+}
+
+/* ----- header and menu (mobile first) ----- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #080D18;
+  border-bottom: 1px solid #26335f;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #F3F6FF;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+}
+
+.orb {
+  width: 36px;
+  height: 36px;
+}
+
+.burger {
+  background: none;
+  border: none;
+  color: #F3F6FF;
+  font-size: 26px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+/* the menu is hidden on phones until the button is clicked */
+nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #080D18;
+  padding: 20px;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 30;
+}
+
+nav.open { display: flex; }
+
+nav .close { align-self: flex-end; }
+
+nav a {
+  color: #F3F6FF;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 17px;
+}
+
+nav a[aria-current="page"] {
+  background-color: #1a2760;
+  border: 1px solid #3b4b8f;
+}
+
+/* ----- buttons ----- */
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background-image: linear-gradient(90deg, #8957FF, #4263FF);
+}
+
+.btn:hover { opacity: 0.85; }
+
+.ghost {
+  background: none;
+  border: 1px solid #3b4b8f;
+  color: #42D9FF;
+}
+
+/* ----- cards ----- */
+.card {
+  background-color: #14204a;
+  border: 1px solid #2c3b78;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* ----- home page ----- */
+.hero { padding: 50px 0 30px; }
+
+.hero h1 { margin: 12px 0 16px; }
+.hero h1 em { color: #42D9FF; }
+
+.eyebrow {
+  color: #42D9FF;
+  font-size: 13px;
+}
+
+.lead {
+  font-size: 18px;
+  margin-bottom: 24px;
+  max-width: 420px;
+}
+
+.globe-img {
+  display: block;
+  width: 260px;
+  max-width: 80%;
+  height: auto;
+  margin: 30px auto 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.feat {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ico {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 14px;
+  background-color: #3a3f9e;
+  text-align: center;
+  line-height: 48px;
+  font-size: 22px;
+}
+
+.try { text-align: center; }
+
+.quote {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: #42D9FF;
+  max-width: 300px;
+  margin: 30px auto 0;
+}
+
+/* ----- try mindcuit steps ----- */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.step { display: none; }
+.step.active { display: block; }
+.step .globe-img { margin: 0 0 16px; width: 100px; animation: none; }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.chip {
+  border: 1px solid #3b4b8f;
+  background-color: #14204a;
+  color: #F3F6FF;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ----- forms ----- */
+label {
+  display: block;
+  margin: 16px 0 6px;
+}
+
+input, textarea, select {
+  width: 100%;
+  font-size: 16px;
+  color: #F3F6FF;
+  background-color: #0b1228;
+  border: 1px solid #3b4b8f;
+  border-radius: 14px;
+  padding: 14px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.count {
+  text-align: right;
+  font-size: 13px;
+}
+
+.note {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.help {
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.hidden { display: none; }
+
+.app { display: flex; flex-direction: column; gap: 6px; }
+.app a { font-weight: 600; margin-top: auto; }
+
+/* ----- footer ----- */
+footer {
+  border-top: 1px solid #26335f;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer nav {
+  display: flex;
+  position: static;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: none;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+footer nav a {
+  padding: 4px 10px;
+  font-size: 14px;
+  color: #42D9FF;
+}
+
+/* ===== tablet (768px and up) ===== */
+@media (min-width: 768px) {
+  h1 { font-size: 46px; }
+  h2 { font-size: 32px; }
+
+  .three { grid-template-columns: 1fr 1fr 1fr; }
+  .two { grid-template-columns: 1fr 1fr; }
+
+  .hero .wrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero .wrap div { flex: 1; }
+  .globe-img { width: 320px; }
+
+  .narrow { max-width: 680px; }
+}
+
+/* ===== desktop (1024px and up) ===== */
+@media (min-width: 1024px) {
+  h1 { font-size: 56px; }
+
+  section { padding: 70px 0; }
+
+  .burger { display: none; }
+
+  nav, nav.open {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    gap: 2px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+
+/* for people who turn off animations on their device */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
+}
